@@ -1,0 +1,3 @@
+".\Objects\DC_Motor_code.obj" 
+TO ".\Objects\DC_Motor_Clockwise_Anti" 
+PRINT(".\Listings\DC_Motor_Clockwise_Anti.m51")

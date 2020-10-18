@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/13/2020  18:11:50  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\DC_Motor_code.obj TO .\Objects\DC_Motor_Clockwise_Anti PRINT (.\Listings\DC_Motor_Clo
+>> ckwise_Anti.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\DC_Motor_code.obj (DC_MOTOR_CODE)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\DC_Motor_Clockwise_Anti (DC_MOTOR_CODE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0019H     UNIT         ?PR?_DELAY?DC_MOTOR_CODE
+            CODE    0819H     0018H     UNIT         ?PR?MAIN?DC_MOTOR_CODE
+            CODE    0831H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\DC_Motor_Clockwise_Anti (DC_MOTOR_CODE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?DC_MOTOR_CODE
+
+?PR?MAIN?DC_MOTOR_CODE
+  +--> ?PR?_DELAY?DC_MOTOR_CODE
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\DC_Motor_Clockwise_Anti (DC_MOTOR_CODE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DC_MOTOR_CODE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0800H         PUBLIC        _delay
+  C:0819H         PUBLIC        main
+  B:00A0H.1       PUBLIC        n
+  B:00A0H.0       PUBLIC        p
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/13/2020  18:11:50  PAGE 2
+
+
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        count
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         4
+  C:0800H         LINE#         6
+  C:0804H         LINE#         7
+  C:0808H         LINE#         8
+  C:0808H         LINE#         9
+  C:0811H         LINE#         10
+  C:0816H         LINE#         12
+  C:0818H         LINE#         13
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0819H         LINE#         14
+  C:0819H         LINE#         16
+  C:0819H         LINE#         18
+  C:081BH         LINE#         19
+  C:081DH         LINE#         20
+  C:0824H         LINE#         21
+  C:0826H         LINE#         22
+  C:0828H         LINE#         23
+  C:082FH         LINE#         24
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        DC_MOTOR_CODE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0031H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=64
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

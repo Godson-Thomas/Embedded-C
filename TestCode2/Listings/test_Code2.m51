@@ -1,0 +1,47 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/01/2020  21:25:25  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\hello2.obj TO .\Objects\test_Code2 PRINT (.\Listings\test_Code2.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\hello2.obj (HELLO2)
+
+
+LINK MAP OF MODULE:  .\Objects\test_Code2 (HELLO2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\test_Code2 (HELLO2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\test_Code2 (HELLO2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        HELLO2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  -------         ENDMOD        HELLO2
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0000H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=0.0 xdata=0 code=0
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

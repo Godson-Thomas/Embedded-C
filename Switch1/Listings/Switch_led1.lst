@@ -1,0 +1,55 @@
+C51 COMPILER V9.60.0.0   SWITCH_LED1                                                       10/08/2020 19:07:16 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE SWITCH_LED1
+OBJECT MODULE PLACED IN .\Objects\Switch_led1.obj
+COMPILER INVOKED BY: D:\Keil\C51\BIN\C51.EXE Switch_led1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -Switch_led1.lst) TABS(2) OBJECT(.\Objects\Switch_led1.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay(unsigned int count){
+   3   1      unsigned int i;
+   4   1        while(count){
+   5   2          i=115;
+   6   2        
+   7   2          while(i>0)
+   8   2            i--;
+   9   2          
+  10   2        count--;
+  11   2        
+  12   2        }
+  13   1      
+  14   1      
+  15   1      }
+  16          sbit led=P2^0;
+  17          sbit sw1=P2^5;
+  18          sbit sw2=P2^4;
+  19          void main(){
+  20   1        
+  21   1      led=0;
+  22   1        while(1){
+  23   2      if(sw1==0 || sw2==0){
+  24   3      
+  25   3      led=1;
+  26   3      }
+  27   2      else {
+  28   3        led=0;
+  29   3      }
+  30   2      }
+  31   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     41    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

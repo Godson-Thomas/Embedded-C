@@ -1,0 +1,81 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    10/01/2020  21:09:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE .\Objects\hello.obj TO .\Objects\Test_Code PRINT (.\Listings\Test_Code.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\hello.obj (HELLO)
+
+
+LINK MAP OF MODULE:  .\Objects\Test_Code (HELLO)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0800H                  *** GAP ***
+            CODE    0800H     000FH     UNIT         ?PR?DELAY?HELLO
+            CODE    080FH     000EH     UNIT         ?PR?LOOP?HELLO
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Test_Code (HELLO)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Test_Code (HELLO)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        HELLO
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        delay
+  C:080FH         PUBLIC        loop
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         2
+  C:0800H         LINE#         4
+  C:080EH         LINE#         6
+  -------         ENDPROC       DELAY
+  -------         PROC          LOOP
+  C:080FH         LINE#         7
+  C:080FH         LINE#         9
+  C:080FH         LINE#         10
+  C:0812H         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  10/01/2020  21:09:29  PAGE 2
+
+
+  C:0815H         LINE#         12
+  C:0818H         LINE#         13
+  C:081BH         LINE#         14
+  -------         ENDPROC       LOOP
+  -------         ENDMOD        HELLO
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LOOP?HELLO
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001DH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=29
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

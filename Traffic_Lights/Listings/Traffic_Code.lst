@@ -1,0 +1,57 @@
+C51 COMPILER V9.60.0.0   TRAFFIC_CODE                                                      10/13/2020 18:39:22 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TRAFFIC_CODE
+OBJECT MODULE PLACED IN .\Objects\Traffic_Code.obj
+COMPILER INVOKED BY: D:\Keil\C51\BIN\C51.EXE Traffic_Code.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\Traffic_Code.lst) TABS(2) OBJECT(.\Objects\Traffic_Code.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit r=P2^0;
+   3          sbit y=P2^1;
+   4          sbit g=P2^2;
+   5          void delay(unsigned int count){
+   6   1        unsigned int i;
+   7   1      while(count){
+   8   2      i=115;
+   9   2        while(i>0)
+  10   2          i--;
+  11   2      count--;
+  12   2      
+  13   2      }
+  14   1      
+  15   1      }
+  16          void main(){
+  17   1      
+  18   1      r=y=g=0;
+  19   1        while(1){
+  20   2        g=1;
+  21   2          delay(5000);
+  22   2        g=0;
+  23   2        y=1;
+  24   2          delay(2000);
+  25   2          y=0;
+  26   2        r=1;
+  27   2        delay(5000);
+  28   2          r=0;
+  29   2        
+  30   2        }
+  31   1      
+  32   1      
+  33   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     66    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

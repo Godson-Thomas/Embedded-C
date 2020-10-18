@@ -1,0 +1,56 @@
+C51 COMPILER V9.60.0.0   _7SEGMENT                                                         10/13/2020 21:26:28 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE _7SEGMENT
+OBJECT MODULE PLACED IN .\Objects\_7segment.obj
+COMPILER INVOKED BY: D:\Keil\C51\BIN\C51.EXE _7segment.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\_7
+                    -segment.lst) TABS(2) OBJECT(.\Objects\_7segment.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay(unsigned int count){
+   3   1      unsigned int i;
+   4   1        while(count){
+   5   2          i=115;
+   6   2          while(i>0)
+   7   2            i--;
+   8   2      
+   9   2          
+  10   2      count--;
+  11   2          
+  12   2          
+  13   2        }
+  14   1      }
+  15          void main(){
+  16   1      unsigned char ar[10]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+  17   1      unsigned char i=10;
+  18   1      P2=0x00;
+  19   1      while(1){
+  20   2      for(i=0;i<10;i++){
+  21   3      
+  22   3      P2=ar[i];
+  23   3        delay(1000);
+  24   3      
+  25   3      
+  26   3      
+  27   3      }
+  28   2      
+  29   2      
+  30   2      
+  31   2      }
+  32   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     76    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      10
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
